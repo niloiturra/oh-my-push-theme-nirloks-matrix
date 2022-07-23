@@ -1,14 +1,5 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "palette": {
-    "red": "#FF0000",
-    "red-soft": "#cc2323",
-    "green-black": "#003B00",
-    "green-normal": "#008F11",
-    "green-white": "#00FF41",
-    "green-yellow": "#bcf57b",
-    "black": "#0D0208"
-  },
   "blocks": [
     {
       "alignment": "left",
@@ -17,13 +8,13 @@
         {
           "background": "p:green-normal",
           "foreground": "p:black",
+          "leading_diamond": "\ue0b2",
           "properties": {
             "ubuntu": "\uf31b ",
             "windows": "\uf871 "
           },
           "style": "diamond",
           "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}}",
-          "leading_diamond": "\ue0b2",
           "trailing_diamond": "<transparent,#008F11>\ue0b2</>",
           "type": "os"
         },
@@ -32,20 +23,20 @@
           "foreground": "p:black",
           "leading_diamond": "\ue0b2",
           "style": "diamond",
-          "trailing_diamond": "<transparent,#008F11>\ue0b2</>",
           "template": "\uf489 <strong>{{ .Name }}</>",
+          "trailing_diamond": "<transparent,#008F11>\ue0b2</>",
           "type": "shell"
         },
         {
           "background": "p:green-black",
           "foreground": "p:green-white",
           "leading_diamond": "\ue0b2",
-          "trailing_diamond": "\ue0b0",
           "properties": {
             "style": "full"
           },
           "style": "diamond",
           "template": " {{ .Path }} ",
+          "trailing_diamond": "\ue0b0",
           "type": "path"
         }
       ],
@@ -81,25 +72,25 @@
           "background": "p:green-black",
           "foreground": "p:green-yellow",
           "leading_diamond": "\ue0b2",
-          "trailing_diamond": "<transparent, #003B00>\ue0b2</>",
-          "style": "diamond",
           "properties": {
             "style": "folder",
             "time_format": "15:04"
           },
+          "style": "diamond",
           "template": " \uf675 {{ .CurrentDate | date .Format }} ",
+          "trailing_diamond": "<transparent, #003B00>\ue0b2</>",
           "type": "time"
         },
         {
           "background": "p:green-black",
           "foreground": "#3EC669",
           "leading_diamond": "\ue0b2",
-          "trailing_diamond": "<transparent, #003B00>\ue0b2</>",
-          "style": "diamond",
           "properties": {
             "always_enabled": true
           },
+          "style": "diamond",
           "template": " {{ if gt .Code 0 }}<p:red>\uf00d</>{{ else }}\uf00c{{ end }} ",
+          "trailing_diamond": "<transparent, #003B00>\ue0b2</>",
           "type": "exit"
         }
       ],
@@ -122,6 +113,15 @@
     }
   ],
   "console_title_template": "{{ .Folder }}",
+  "palette": {
+    "black": "#0D0208",
+    "green-black": "#003B00",
+    "green-normal": "#008F11",
+    "green-white": "#00FF41",
+    "green-yellow": "#bcf57b",
+    "red": "#FF0000",
+    "red-soft": "#cc2323"
+  },
   "transient_prompt": {
     "background": "transparent",
     "foreground": "#FEF5ED",
